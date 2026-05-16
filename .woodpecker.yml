@@ -1,0 +1,15 @@
+when:
+  - event: push
+    branch: main
+
+steps:
+  - name: deny-list
+    image: alpine/git
+    commands:
+      - apk add --no-cache bash
+      - bash scripts/check-deny-list.sh
+
+  - name: shellcheck
+    image: koalaman/shellcheck-alpine
+    commands:
+      - shellcheck dot-claude/hooks/SessionStart.sh scripts/check-deny-list.sh

@@ -1,0 +1,38 @@
+# Files/dirs that must NEVER be committed to this repo.
+# Each line is a fixed substring matched against the staged file path.
+# Lines starting with # are comments. Empty lines ignored.
+# Enforced by scripts/check-deny-list.sh in Woodpecker CI.
+
+# Per-box mutable overrides
+settings.local.json
+
+# Runtime state — pollutes the seed, often contains pastes/secrets
+history.jsonl
+mcp-needs-auth-cache.json
+scheduled_tasks.lock
+
+# Runtime caches and per-session detritus
+/sessions/
+/shell-snapshots/
+/paste-cache/
+/cache/
+/file-history/
+/telemetry/
+/session-env/
+/projects/
+/backups/
+/downloads/
+/plans/
+/tasks/
+
+# User-personal (not box-personal) preferences
+keybindings.json
+
+# Credentials / signing keys / tokens
+.credentials.json
+peer-sign.pem
+finance-sign.pem
+nodecard-sign.key
+admin-api-token
+forgejo-commons-token
+.env

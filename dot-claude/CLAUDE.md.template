@@ -1,0 +1,21 @@
+# ${BOX_HOSTNAME} (farmhackbox-${BOX_NN})
+
+This box was seeded from `claude-harness-seed`. Box-specific facts the harness can rely on:
+
+- **Hostname:** `${BOX_HOSTNAME}`
+- **Sequence number:** `${BOX_NN}`
+- **Tailscale IP:** `${BOX_TS_IP}`
+- **User / home:** `${BOX_USER}` / `/home/${BOX_USER}`
+- **Forgejo:** `http://192.168.68.120:3030` (LAN) or `http://farmhackbox-01.tail272452.ts.net:3030` (Tailscale)
+- **Postgres:** local PostgreSQL 17 on default socket, db `farmbox`
+- **Admin UI:** `http://localhost:8080/admin/`
+
+## Inherited context
+
+Ancestor memories from prior boxes live under `~/.claude/projects/-home-${BOX_USER}/ancestor-memory/<source_box>/`. They are read-only. When following an ancestor memory, mentally substitute its `source_box` paths per `/etc/farmhack/box-translation.yml`.
+
+When writing new memories on this box, use box-relative paths (e.g. `~/...`) rather than `farmhackbox-01`-specific ones — otherwise the translation map grows stale.
+
+## Replay policy
+
+The `farmhack replay` CLI controls which ancestor projects are enabled on this box. See `/etc/farmhack/replay-policy.json` for the current state and `farmhack replay status` for a summary.
