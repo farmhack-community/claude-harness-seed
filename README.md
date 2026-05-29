@@ -36,4 +36,6 @@ The hook + template are idempotent across re-runs.
 
 ## Plan
 
-See `/home/tuckawaypos/claude-workflow-archive-plan.md` on farmhackbox-01 (Track R session R2).
+The design rationale and rollout plan for this seed live in the box operator's
+private planning notes (not mirrored). Open an issue if you'd like context on a
+specific convention.
