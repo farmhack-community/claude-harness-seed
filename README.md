@@ -39,3 +39,5 @@ The hook + template are idempotent across re-runs.
 The design rationale and rollout plan for this seed live in the box operator's
 private planning notes (not mirrored). Open an issue if you'd like context on a
 specific convention.
+
+_Mirror sync verified 2026-05-28._
