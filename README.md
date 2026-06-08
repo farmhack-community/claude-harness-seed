@@ -1,3 +1,5 @@
+> **📖 Read-only public mirror.** This repository is a one-way mirror of the canonical source, which lives in a Farm Hack Box's Forgejo instance. Issues and pull requests opened here are **not monitored** — to contribute or get write access, host a Farm Hack Box. The mirror force-pushes from upstream every 8h + on commit, so changes made directly on GitHub are overwritten.
+
 # claude-harness-seed
 
 The `~/.claude/` skeleton that the first-boot wizard's `claude_seed` step rsyncs onto every Farm Hack Box. Identical content on every box.
